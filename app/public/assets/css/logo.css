@@ -1,0 +1,188 @@
+.logoAnim {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    max-width: 100vw;
+    height: 375px;
+    font-size: 100pt;
+    animation: logoAnim 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.logoAnim .logo {
+    width: 25%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 55px;
+}
+
+.logoAnim *:not(.text):not(.logo) {
+    display: inline-block;
+}
+
+.logoAnim .leftBracket {
+    animation: logoAnimLeft 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.logoAnim svg {
+    width: calc(100px - 2vh);
+    height: calc(100px - 2vh);
+}
+
+.logoAnim svg .st0 {
+    fill: #FFDA00;
+}
+
+.logoAnim svg .st1 {
+    fill: #878787;
+}
+
+.logoAnim .rightBracket {
+    margin-left: 5px;
+}
+
+.logoAnim .initials {
+    animation: logoAnimInitials 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.logoAnim .rightBracket {
+    animation: logoAnimRight 2.5s;
+    animation-fill-mode: forwards;
+}
+
+.logoAnim .text {
+    position: relative;
+    font-size: 15pt;
+    max-width: 100vw;
+    animation: logoAnimText 2.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.logoAnim .text svg {
+    width: 100%;
+    height: 25px;
+    font-size: 14pt;
+}
+
+.skills {
+    position: absolute;
+    top: calc(30% + 275px);
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: OpenSans, sans-serif;
+    width: 250px;
+    height: 50px;
+    transform: translateX(-50%);
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.skills .html {
+    animation: skillsText 2.75s ease;
+    animation-fill-mode: forwards;
+    transition: ease 0.5s;
+}
+
+.skills .js {
+    animation: skillsText 3.25s ease;
+    animation-fill-mode: forwards;
+    transform: ease 0.5s;
+}
+
+.skills .css {
+    animation: skillsText 3.75s ease;
+    animation-fill-mode: forwards;
+    transform: ease 0.5s;
+}
+
+@keyframes logoAnim {
+    0% {
+        transform: translate(-50%, 0) scale(1.5);
+    }
+    75% {
+        transform: translate(-50%, 0) scale(1.75);
+    }
+    100% {
+        transform: translate(-50%, 0) scale(1.745);
+    }
+}
+
+@keyframes logoAnimLeft {
+    0% {
+        transform: translate(120%, 0);
+    }
+    77% {
+        transform: translate(35%, 0);
+    }
+    100% {
+        transform: translate(60%, 0);
+    }
+}
+
+@keyframes logoAnimInitials {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoAnimRight {
+    0% {
+        transform: translate(-120%, 0);
+    }
+    75% {
+        transform: translate(-35%, 0);
+    }
+    100% {
+        transform: translate(-60%, 0);
+    }
+}
+
+@keyframes logoAnimText {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+        transform: translateY(-75%);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    75% {
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes skillsText {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(25%);
+    }
+}
