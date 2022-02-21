@@ -1,0 +1,172 @@
+@media only screen and (min-width: 900px) {
+    .carousel-pages {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .carousel-pages {
+        display: none;
+    }
+}
+
+.image-carousel {
+    margin: 25px auto auto;
+    width: 75%;
+    height: calc(25vw + 10vh);
+    border: 1px solid var(--main-selected-color);
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    justify-content: start;
+    padding: auto;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.image-carousel::after {
+    content: url("../../images/image-carousel/zoom.svg");
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.image-carousel img {
+    display: none;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    user-select: none;
+}
+
+.carousel-arrow {
+    background-color: white;
+    width: 40px;
+    height: 50px;
+    border: 1px solid black;
+    position: relative;
+    cursor: pointer;
+    border-radius: 2.5px;
+    transition: background-color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.carousel-arrow.left {
+    position: absolute;
+    bottom: calc(10% + 10vw);
+    left: calc(15vw - 1vh);
+}
+
+.carousel-arrow.right {
+    position: absolute;
+    bottom: calc(10% + 10vw);
+    right: calc(15vw - 1vh);
+}
+
+.carousel-arrow.left::after {
+    content: url("../../images/image-carousel/left-arrow.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-arrow.right::after {
+    content: url("../../images/image-carousel/right-arrow.svg");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-pages {
+    gap: 10px;
+    padding: 0 5px;
+    height: 25px;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0 0;
+    margin-block-start: 0;
+    padding-inline-start: 5px;
+    list-style-type: none;
+    transition: 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.carousel-pages .carousel-page {
+    cursor: pointer;
+    stroke: lightgrey;
+    fill: lightgrey;
+    width: 10px;
+}
+
+.carousel-pages .carousel-page:hover svg {
+    stroke: grey;
+    fill: grey;
+}
+
+.carousel-pages .carousel-page.selected {
+    stroke: grey;
+    fill: grey;
+}
+
+#opaque {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+
+#zoomImg {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: calc(23.5% + 20vh - 10vw) 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid grey;
+    z-index: 102;
+}
+
+#imageZoomClose {
+    font-size: 18pt;
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 5px;
+    right: 2%;
+    cursor: pointer;
+    border: 2px solid black;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: white;
+    z-index: 103;
+}
+
+#imageZoomClose:hover {
+    background-color: lightgrey;
+}
+
+#imageZoomClose::after {
+    content: "X";
+}

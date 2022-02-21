@@ -1,0 +1,133 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+
+/*
+    Created on : Nov 28, 2013, 7:09:35 AM
+    Author     : bugraozden
+*/
+
+.icon-select {
+    width: 0px;
+}
+
+.icon-select .selected-box {
+    position: relative;
+    margin: auto;
+    padding: 0px;
+    width: 90px;
+    height: 60px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.icon-select .selected-box:hover {
+    position: relative;
+    padding: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.icon-select .selected-icon {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    width: inherit;
+    height: inherit;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.icon-select .selected-icon img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin: 5px 10px 5px 10px;
+    transform: translateY(0);
+    transition: 0s;
+}
+
+.icon-select .component-icon {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    bottom: 5px;
+    right: 4px;
+}
+
+.icon-select .box {
+    position: absolute;
+    top: 0px;
+    left: 71px;
+    margin: 0px;
+    padding: 0px;
+    width: 90px;
+    height: calc(var(--headerHeight) - 10px);
+    background-color: var(--secondary-color);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: auto;
+    transition: 0.2s ease;
+}
+
+.icon-select .icon {
+    position: relative;
+    margin: 1px 0 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #383838;
+    background-color: #383838;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+}
+
+.icon-select .icon.selected {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-selected-color);
+}
+
+.icon-select .icon img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 2.5px 2.5px 5px;
+    transform: translate(-60%, 0);
+}
+
+.icon-select .icon:not(.selected):hover {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-selected-color);
+}
+
+#langArrow {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    filter: invert(1);
+    transition: transform 0.2s ease;
+}
