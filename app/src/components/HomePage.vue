@@ -1,6 +1,7 @@
 <template>
   <div id="top">
-    <title>{{ title }}</title><div class="header">
+    <title>{{ title }}</title>
+	<div class="header">
         <img alt="Logo" onclick="window.location.href='/'" src="assets/images/favicon.svg">
         <div class="navbar">
             <ul class="navlist">
