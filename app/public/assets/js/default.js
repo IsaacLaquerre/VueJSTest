@@ -2,13 +2,11 @@
 var lang = getCookie("lang") != "undefined" ? getCookie("lang") : "en";
 // eslint-disable-next-line no-unused-vars
 function onLoad() {
-    const form = document.getElementById("emailForm");
-    if (form) form.addEventListener("submit", handleSubmit);
 
     setUpCarousel();
     window.onscroll = function() {
-      shrinkHeader();
-      backToTop();
+        shrinkHeader();
+        backToTop();
     }
 
     if (getCookie("acceptedCookies") != null) {
@@ -62,57 +60,6 @@ function askCookies() {
     cookiesDiv.appendChild(cookieButtons);
 
     document.body.appendChild(cookiesDiv);
-}
-// eslint-disable-next-line no-unused-vars
-function handleSubmit(event) {
-    event.preventDefault();
-
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const data = {
-        email,
-        subject,
-        message
-    };
-
-    fetch("/email/send", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-        }
-    }).then(body => body.json()).then(res => {
-        if (res.status === "ok") {
-            switch (getCookie("lang")) {
-                case "fr":
-                    alert("Email envoyé avec succès!");
-                    break;
-                default:
-                    alert("Email successfully sent!");
-                    break;
-            }
-            document.getElementById('email').value = "";
-            document.getElementById('subject').value = "";
-            document.getElementById('message').value = "";
-        } else {
-            var errorDiv = document.createElement("div");
-            errorDiv.classList.add("center");
-            errorDiv.style.margin = "auto 40% auto 40%";
-            errorDiv.style.backgroundColor = "#ffcccc";
-            errorDiv.style.border = "2px solid #ff3333";
-            errorDiv.style.width = "50%;";
-            errorDiv.id = "error";
-            var errorSpan = document.createElement("span");
-            errorSpan.classList.add("center");
-            errorSpan.style.margin = "50% 10px 10px 10px;";
-            errorSpan.innerHTML = res.error;
-            errorDiv.appendChild(errorSpan);
-            if (!document.getElementById("error")) document.getElementById("emailForm").appendChild(errorDiv);
-        }
-    });
 }
 // eslint-disable-next-line no-unused-vars
 function displayNavbar2() {

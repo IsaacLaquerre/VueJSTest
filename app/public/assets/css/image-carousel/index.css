@@ -93,14 +93,15 @@
 .carousel-pages {
     gap: 10px;
     padding: 0 5px;
-    height: 25px;
+    height: 20px;
     justify-content: center;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    margin: 15px 0 0;
+    margin: 0;
     margin-block-start: 0;
+    margin-block-end: 0;
     padding-inline-start: 5px;
     list-style-type: none;
     transition: 0.2s ease;
@@ -113,6 +114,7 @@
     stroke: lightgrey;
     fill: lightgrey;
     width: 10px;
+    transform: translateY(-10px);
 }
 
 .carousel-pages .carousel-page:hover svg {

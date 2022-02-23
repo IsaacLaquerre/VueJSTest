@@ -1,14 +1,11 @@
 <template>
-  <HomePage title="Isaac Laquerre" />
+  <router-view></router-view>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HomePage
-  }
+  path: "/",
+  name: 'App'
 }
 </script>

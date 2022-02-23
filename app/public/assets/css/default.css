@@ -148,6 +148,8 @@ body {
     left: 0;
     right: 0;
     transition: 0.2s ease;
+    border-bottom: 1px solid var(--main-selected-color);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 1.5px;
 }
 
 .header img {
@@ -355,6 +357,13 @@ form button#submit:hover {
     border-radius: 10%;
     cursor: pointer;
     z-index: 100;
+    box-shadow: #41414170 1px 1.5px;
+    transition: 0.2s ease;
+}
+
+#scrollBackToTop:active {
+    transform: translate(1px, 1.5px);
+    box-shadow: var(--main-color) 0 0;
 }
 
 #scrollBackToTop::after {
