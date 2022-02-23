@@ -107,6 +107,9 @@
     #lang-select {
         cursor: pointer;
     }
+    #lang-select:hover {
+        background-color: var(--main-selected-color);
+    }
     #lang-select:hover .box {
         background-color: var(--main-selected-color);
     }
@@ -149,7 +152,7 @@ body {
     right: 0;
     transition: 0.2s ease;
     border-bottom: 1px solid var(--main-selected-color);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1.5px;
 }
 
 .header img {
@@ -234,6 +237,7 @@ body {
     height: 100vh;
     background-color: var(--main-mobile-color);
     z-index: 105;
+    opacity: 0.95;
 }
 
 #lang {
@@ -257,6 +261,15 @@ body {
     margin: 5px 0;
     width: 75px;
     height: 40px;
+}
+
+.navbar2 .icon {
+    height: 50px;
+    margin-top: 5px;
+}
+
+.navbar2 .icon.selected {
+    border-radius: 2%;
 }
 
 .link {

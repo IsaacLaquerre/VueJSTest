@@ -83,13 +83,14 @@ function shrinkHeader() {
         if (document.getElementById("icon-select-box-scroll").style.display === "block") displayLangSelect();
         if (window.innerWidth > 900) {
             document.querySelector(":root").style.setProperty("--headerHeight", "calc(3vw + 3vh)");
-            document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 20 - 1.25vh + 1vw)";
+            document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 2)";
             document.querySelectorAll(".section").forEach(el => el.style.paddingTop = "130px");
         }
     } else {
+        if (document.getElementById("icon-select-box-scroll").style.display === "block") displayLangSelect();
         if (window.innerWidth > 900) {
             document.querySelector(":root").style.setProperty("--headerHeight", "calc(4vw + 5vh)");
-            document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 4 - 1.25vh + 0.5vw)";
+            document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 2)";
         }
     }
 }
@@ -98,20 +99,23 @@ function displayLangSelect() {
     switch (document.getElementById("icon-select-box-scroll").style.display) {
         case "none":
             document.getElementById("icon-select-box-scroll").style.display = "block";
-            if (scrollY > 40 && document.querySelector(":root").style.getPropertyValue("--headerHeight") === "calc(3vw + 3vh)") {
+            if (scrollY > 40 && document.querySelector(".selected-box").style.transform === "translateY(-50%)") {
                 document.querySelector(":root").style.setProperty("--headerHeight", "calc(4vw + 5vh)");
             }
-            document.querySelector(".selected-box").style.marginTop = "3px";
+            document.querySelector(".selected-box").style.transform = "translateY(-85%)";
+            document.querySelector("#lang-select").style.backgroundColor = "var(--main-selected-color)";
             document.getElementById("langArrow").style.transform = "rotate(90deg)";
             break;
         case "block":
             document.getElementById("icon-select-box-scroll").style.display = "none";
-            if (scrollY > 40 && document.querySelector(":root").style.getPropertyValue("--headerHeight") === "calc(4vw + 5vh)") {
+            if (scrollY > 40 && document.querySelector(".selected-box").style.transform === "translateY(-85%)") {
                 document.querySelector(":root").style.setProperty("--headerHeight", "calc(3vw + 3vh)");
-                document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 20 - 1.25vh + 1vw)";
+                document.querySelector("#lang-select").style.backgroundColor = "var(--secondary-color)";
+                document.querySelector(".selected-box").style.transform = "translateY(-50%)";
             }
             if (scrollY < 40) {
-                document.querySelector(".selected-box").style.marginTop = "calc(var(--headerHeight) / 4 - 1.25vh + 0.5vw)";
+                document.querySelector(".selected-box").style.transform = "translateY(-50%)";
+                document.querySelector("#lang-select").style.backgroundColor = "var(--secondary-color)";
             }
             document.getElementById("langArrow").style.transform = "rotate(0deg)";
             break;

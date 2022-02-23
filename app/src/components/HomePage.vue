@@ -18,13 +18,13 @@
                         <a href="#contact">Contact</a>
                     </li>
                     <li id="lang-select" onclick="displayLangSelect();" class="navitem center lang-select icon-select" style="width: 100px;">
-                        <div class="selected-box" style="height: 50px; margin-top: calc(var(--headerHeight) / 3.75);">
+                        <div class="selected-box" style="height: 50px; margin-top: calc(var(--headerHeight) / 2); transform: translateY(-50%);">
                             <div class="selected-icon">
                                 <img src="assets/images/lang/en.png">
                                 <img id="langArrow" src="assets/images/icon-select/control/arrow.svg">
                             </div>
                             <div id="icon-select-box-scroll" class="box" style="left: 0; display: none; overflow: hidden;">
-                                <div style="display: flex; justify-content: center; gap: 5px; width: 90px; height: calc(var(--headerHeight) / 2); transition-property: transform; transform-origin: 0px 0px; transform: translate(0, calc(var(--headerHeight) / 2)) translateZ(0px);">
+                                <div style="display: flex; justify-content: center; gap: 5px; width: 90px; height: calc(var(--headerHeight) / 2); transition-property: transform; transform-origin: 0px 0px; transform: translate(0, calc(var(--headerHeight) / 2)) translateZ(0px); margin-top: 2px;">
                                     <div class="icon selected" onclick="handleLang('en');">
                                         <img src="assets/images/lang/en.png" icon-value="en" icon-index="0">
                                     </div>
@@ -58,10 +58,10 @@
                         <li class="navitem center lang">
                             <ul style="list-style-type: none; padding-inline-start: 0; display: flex; flex-direction: row; justify-content: center; gap: 25px; height: 60px">
                                 <li class="icon selected" style="width: 80px;" onclick="handleLang('en'); displayNavbar2();">
-                                    <img src="assets/images/lang/en.png" icon-value="en" icon-index="0" style="margin: 0; width: 50px; transform: translateY(10%);">
+                                    <img src="assets/images/lang/en.png" icon-value="en" icon-index="0" style="margin: 0; width: 50px; transform: translateY(0);">
                                 </li>
                                 <li class="icon" style="width: 80px;" onclick="handleLang('fr'); displayNavbar2();">
-                                    <img src="assets/images/lang/fr.png" icon-value="fr" icon-index="1" style="margin: 0; width: 50px; transform: translateY(10%);">
+                                    <img src="assets/images/lang/fr.png" icon-value="fr" icon-index="1" style="margin: 0; width: 50px; transform: translateY(0);">
                                 </li>
                             </ul>
                         </li>
