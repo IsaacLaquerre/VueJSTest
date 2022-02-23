@@ -1,18 +1,18 @@
 <template>
-    <div id="top">
+    <div id="app">
         <title>{{ title }}</title>
         <div class="header">
             <img alt="Logo" onclick="window.location.href='/'" src="assets/images/favicon.svg">
             <div class="navbar">
                 <ul class="navlist">
                     <li class="navitem">
-                        <a href="#about">About</a>
+                        <a href="#about">À propos</a>
                     </li>
                     <li class="navitem">
                         <a href="#services">Services</a>
                     </li>
                     <li class="navitem">
-                        <a href="#projects">Projects</a>
+                        <a href="#projects">Projets</a>
                     </li>
                     <li class="navitem">
                         <a href="#contact">Contact</a>
@@ -20,15 +20,15 @@
                     <li id="lang-select" onclick="displayLangSelect();" class="navitem center lang-select icon-select" style="width: 100px;">
                         <div class="selected-box" style="height: 50px; margin-top: calc(var(--headerHeight) / 2); transform: translateY(-50%);">
                             <div class="selected-icon">
-                                <img src="assets/images/lang/en.png">
+                                <img src="assets/images/lang/fr.png">
                                 <img id="langArrow" src="assets/images/icon-select/control/arrow.svg">
                             </div>
                             <div id="icon-select-box-scroll" class="box" style="left: 0; display: none; overflow: hidden;">
                                 <div style="display: flex; justify-content: center; gap: 5px; width: 90px; height: calc(var(--headerHeight) / 2); transition-property: transform; transform-origin: 0px 0px; transform: translate(0, calc(var(--headerHeight) / 2)) translateZ(0px); margin-top: 2px;">
-                                    <div class="icon selected" onclick="handleLang('en');">
+                                    <div class="icon" onclick="handleLang('en');">
                                         <img src="assets/images/lang/en.png" icon-value="en" icon-index="0">
                                     </div>
-                                    <div class="icon" onclick="handleLang('fr');">
+                                    <div class="icon selected" onclick="handleLang('fr');">
                                         <img src="assets/images/lang/fr.png" icon-value="fr" icon-index="1">
                                     </div>
                                 </div>
@@ -44,23 +44,23 @@
                 <div class="dropdown-content" style="display: none;">
                     <ul class="navlist">
                         <li class="navitem" onclick="displayNavbar2();">
-                            <a href="#about">About</a>
+                            <a href="#about">À propos</a>
                         </li>
                         <li class="navitem" onclick="displayNavbar2();">
                             <a href="#services">Services</a>
                         </li>
                         <li class="navitem" onclick="displayNavbar2();">
-                            <a href="#projects">Projects</a>
+                            <a href="#projects">Projets</a>
                         </li>
                         <li class="navitem" onclick="displayNavbar2();">
                             <a href="#contact">Contact</a>
                         </li>
                         <li class="navitem center lang">
                             <ul style="list-style-type: none; padding-inline-start: 0; display: flex; flex-direction: row; justify-content: center; gap: 25px; height: 60px">
-                                <li class="icon selected" style="width: 80px;" onclick="handleLang('en'); displayNavbar2();">
+                                <li class="icon" style="width: 80px;" onclick="handleLang('en'); displayNavbar2();">
                                     <img src="assets/images/lang/en.png" icon-value="en" icon-index="0" style="margin: 0; width: 50px; transform: translateY(0);">
                                 </li>
-                                <li class="icon" style="width: 80px;" onclick="handleLang('fr'); displayNavbar2();">
+                                <li class="icon selected" style="width: 80px;" onclick="handleLang('fr'); displayNavbar2();">
                                     <img src="assets/images/lang/fr.png" icon-value="fr" icon-index="1" style="margin: 0; width: 50px; transform: translateY(0);">
                                 </li>
                             </ul>
@@ -130,24 +130,23 @@
 
         <div class="spacer" style="height: 60vh;"></div>
 
-        <div id="about" class="section">
+        <div id="about" class="section" style="margin-top: 0;">
             <div class="center">
-                <div class="card center" style="padding: 25px;">
-                    <h1>About me</h1>
+                <div class="card center">
+                    <h1>À propos de moi</h1>
                     <img src="assets/images/profile.png" style="width: 250px; clip-path: circle(125px at center); margin: 25px 0 5px;">
-                    <h2 style="text-align: left;">Who I am</h2>
+                    <h2 style="text-align: left;">Qui je suis</h2>
                     <br />
-                    <p style="text-align: left;">I'm Isaac, a <span id="age"></span>-year-old self-taught full-stack web developer specialized in HTML, CSS, JavaScript and Node.js. I've always loved programming and development, making small projects like Minecraft plugins in Java, command-line
-                        interface games in C++ and JavaScript, Discord bots with Node.js and random algorithms in Python, to finally stumble upon the wonderful world of web development. Very fluent in both english and french and easily adaptable, I can help
-                        you set your presence online with your own personalized website.</p>
+                    <p style="text-align: left;">Je suis Isaac, un développer web full-stack autodidacte de <span id="age"></span> ans spécialisé en HTML, CSS, JavaScript et Node.js. J'ai toujours adoré programmer, en commençant par des petits projets commes des plugins
+                        Minecraft en Java, des jeux d'interface de ligne de commande en C++ et en JavaScript, des robots Discord avec Node.js et des algorithmes en Python, pour finalement découvrir le monde merveilleux du développement web. Je possède une bonne maîtrise de l'anglais et du français et mes qualités d'adaptation me permettent de réaliser votre site personalisé pour établir votre présence en ligne.</p>
                     <br /><br />
-                    <h2 style="text-align: left;">My experience</h2>
+                    <h2 style="text-align: left;">Mon expérience</h2>
                     <br />
                     <ul style="text-align: left;">
-                        <li>Have worked for over <span id="experience"></span> years with Node.js, JavaScript, HTML & CSS</li>
-                        <li>Been freelance working in web development for the past <span id="freelanceExperience"></span> years</li>
-                        <li>Comfortable with ReactJS, GitHub, Amazon Web Services, CloudFlare and other DNS set-ups</li>
-                        <li>Worked with C#, C++, Python, Ruby (+ Rails), Java and Lua</li>
+                        <li>Utilisé Node.js, JavaScript, HTML & CSS pendant plus de <span id="experience"></span> ans</li>
+                        <li>Travaillé dans le développement web à mon compte pour les <span id="freelanceExperience"></span> dernières années</li>
+                        <li>Comfortable avec ReactJS, GitHub, Amazon Web Services, CloudFlare et autres installations DNS</li>
+                        <li>Travaillé avec C#, C++, Python, Ruby (+ Rails), Java et Lua</li>
                     </ul>
                     <br />
                     <p style="text-align: left; font-size: 18pt"><a href="../../assets/cv.pdf" target="_blank" style="text-decoration: underline; color: white;">Curriculum Vitae</a></p>
@@ -159,48 +158,48 @@
 
         <div id="services" class="section">
             <div class="card center" style="padding: 25px;">
-                <h1>My services</h1>
+                <h1>Mes services</h1>
                 <ul style="text-align: left;">
-                    <li>Full website layout with routed pages (includes custom mobile layout)</li>
-                    <li>Interactive modules, forms, email support, online shop and more</li>
-                    <li>Setting up a secure RESTful API</li>
-                    <li>Integrating a log-in system with sessions</li>
-                    <li>Handling server-side set-up with possibility to hook a database to your website</li>
-                    <li>Handling (fully customizable) database set-up</li>
+                    <li>Mise en page complète de site web avec des pages (mise en page personalisée pour mobile incluse)</li>
+                    <li>Modules intéractifs, formulaires, support e-mail, boutique en ligne et plus</li>
+                    <li>Installer un API RESTful sécuritaire</li>
+                    <li>Intégrer un système de connexion (log-in) avec sessions</li>
+                    <li>Traiter l'installation du côté serveur avec la possibilité de lier une base de donnée à votre site</li>
+                    <li>Traiter l'installation (complètement personalisée) d'une base de donnée</li>
                 </ul>
-                <div class="carousel-arrow left" onclick="carouselLeft();"></div>
-                <div class="carousel-arrow right" onclick="carouselRight();"></div>
-                <div class="image-carousel" onclick="displaySlide(this.children[parseInt(document.querySelector('ul.carousel-pages li.selected').id.split('-')[2]) - 1]);">
-                    <img id="carousel-1" src="assets/images/image-carousel/images/buddhiyoga.png">
-                    <img id="carousel-2" src="assets/images/image-carousel/images/studiolovelies.png">
-                    <img id="carousel-3" src="assets/images/image-carousel/images/gamegrumpsjointjustice.png">
-                </div>
-                <ul class="carousel-pages center">
-                    <li id="carousel-index-1" class="carousel-page selected" onclick="carouselPage(1);">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="50"/>
-                            </svg>
-                    </li>
-                    <li id="carousel-index-2" class="carousel-page" onclick="carouselPage(2);">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="50"/>
-                            </svg>
-                    </li>
-                    <li id="carousel-index-3" class="carousel-page" onclick="carouselPage(3);">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="50"/>
-                            </svg>
-                    </li>
-                </ul>
+            <div class="carousel-arrow left" onclick="carouselLeft();"></div>
+            <div class="carousel-arrow right" onclick="carouselRight();"></div>
+            <div class="image-carousel" onclick="displaySlide(this.children[parseInt(document.querySelector('ul.carousel-pages li.selected').id.split('-')[2]) - 1]);">
+                <img id="carousel-1" src="assets/images/image-carousel/images/buddhiyoga.png">
+                <img id="carousel-2" src="assets/images/image-carousel/images/studiolovelies.png">
+                <img id="carousel-3" src="assets/images/image-carousel/images/gamegrumpsjointjustice.png">
+            </div>
+            <ul class="carousel-pages center">
+                <li id="carousel-index-1" class="carousel-page selected" onclick="carouselPage(1);">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50"/>
+                        </svg>
+                </li>
+                <li id="carousel-index-2" class="carousel-page" onclick="carouselPage(2);">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50"/>
+                        </svg>
+                </li>
+                <li id="carousel-index-3" class="carousel-page" onclick="carouselPage(3);">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="50"/>
+                        </svg>
+                </li>
+            </ul>
             </div>
         </div>
 
         <div id="projects" class="section">
-            <h1 class="center" style="margin-bottom: 25px;">Projects</h1>
+            <h1 class="center" style="margin-bottom: 25px;">Projets</h1>
             <div class="projects">
                 <div class="card center project">
                     <h1>BuddhiYoga</h1>
-                    <h3 style="font-weight: 300;">Personalized website with online scheduler, shop, admin section, blog and email support</h3>
+                    <h3 style="font-weight: 300;">Site web personalisé avec planificateur en-ligne, boutique, section administrateurs, blogue et support e-mail</h3>
                     <img src="assets/images/projects/buddhiYoga.png">
                     <span style="font-weight: 300;">HTML, JS & CSS</span>
                     <br />
@@ -210,8 +209,8 @@
                 <br /><br />
                 <div class="card center project">
                     <h1>Studio Lovelies</h1>
-                    <h3 style="font-weight: 300;">Informative website with email support</h3>
-                    <h3 style="font-weight: 300;">Lead programmer, volunteer project</h3>
+                    <h3 style="font-weight: 300;">Site web informatif avec support e-mail</h3>
+                    <h3 style="font-weight: 300;">Programmeur en chef, projet volontaire</h3>
                     <img src="assets/images/projects/studioLovelies.png">
                     <span style="font-weight: 300;">HTML, JS & CSS</span>
                     <br />
@@ -220,11 +219,11 @@
                 </div>
                 <br /><br />
                 <div class="card center project">
-                    <h1>Game Grumps: Joint Justice by Studio Lovelies</h1>
-                    <h3 style="font-weight: 300;">2D game</h3>
-                    <h3 style="font-weight: 300">Over 3000 downloads, <a href="https://www.youtube.com/watch?v=Skop4WFElhE" target="_blank" style="text-decoration: underline; color: white;">featured on the "Game Grumps" YouTube channel for their 9-year anniversary</a></h3>
+                    <h1>Game Grumps: Joint Justice par Studio Lovelies</h1>
+                    <h3 style="font-weight: 300;">Jeu 2D</h3>
+                    <h3 style="font-weight: 300">Plus de 3000 téléchargements, <a href="https://www.youtube.com/watch?v=Skop4WFElhE" target="_blank" style="text-decoration: underline; color: white;">présenté sur la chaîne YouTube "Game Grumps" pour leur anniversaire de 9 ans</a></h3>
                     <img src="assets/images/projects/gameGrumpsJointJustice.png">
-                    <span style="font-weight: 300;">Lua, powered by LÖVE</span>
+                    <span style="font-weight: 300;">Lua, propulsé par LÖVE</span>
                     <br />
                     <br />
                     <span class="link" onclick="window.open('https://www.youtube.com/watch?v=dAQUyvF43c4');">https://www.youtube.com/watch?v=dAQUyvF43c4</span>
@@ -237,24 +236,24 @@
             <div class="center">
                 <h1 class="center" style="margin-bottom: 25px;">Contact</h1>
                 <div class="container card" style="width: 75%; margin: 50px auto; position: relative;">
-                    <h2 class="center" style="font-weight: 400;">Need to get in touch?</h2>
-                    <h3 class="center" style="font-weight: 300;">Send me an email!</h3>
+                    <h2 class="center" style="font-weight: 400;">Besoin de me contacter?</h2>
+                    <h3 class="center" style="font-weight: 300;">Envoyez-moi un e-mail!</h3>
                     <div class="container center" style="margin: 50px auto; width: 75%; display: flex; justify-content: center;">
                         <form style="width: 100%; text-align: left;" @submit.prevent="sendEmail">
                             <div>
-                                <label for="exampleInputEmail1">Email address: </label>
-                                <input type="email" id="email" v-model="email" aria-describedby="emailHelp" placeholder="Email" required>
-                                <small id="emailHelp"><br />Your email address will never be shared with anyone else.</small>
+                                <label for="exampleInputEmail1">Addresses e-mail: </label>
+                                <input type="email" id="email" v-model="email" aria-describedby="emailHelp" placeholder="E-mail" required>
+                                <small id="emailHelp"><br />Votre addresse e-mail ne sera jamais partagée.</small>
                             </div>
                             <div style="margin-top: 25px;">
-                                <label for="exampleInputEmail1">Subject: </label>
-                                <input type="text" id="subject" v-model="subject" aria-describedby="emailHelp" placeholder="Subject">
+                                <label for="exampleInputEmail1">Sujet: </label>
+                                <input type="text" id="subject" v-model="subject" aria-describedby="emailHelp" placeholder="Sujet">
                             </div>
                             <div style="margin-top: 25px;">
                                 <label for="exampleInputPassword1">Message:</label><br />
                                 <textarea class="form-control" id="message" v-model="message" placeholder="Message" required></textarea>
                             </div>
-                            <button type="submit" id="submit">Send <svg xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg></button>
+                            <button type="submit" id="submit">Envoyer <svg xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 24 24"><path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/></svg></button>
                         </form>
                     </div>
                 </div>
@@ -265,13 +264,13 @@
             <div class="footer-content">
                 <ul>
                     <li>
-                        <a href="#about">About</a>
+                        <a href="#about">À propos</a>
                     </li>
                     <li>
                         <a href="#services">Services</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#projects">Projets</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
@@ -281,20 +280,20 @@
                     <li>
                         <a href="https://www.instagram.com/isaac.laquerre/" target="_blank" style="color: white;">
                             <svg width="40" height="40" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" style="filter: invert(1);" fill-rule="evenodd" clip-rule="evenodd">
-                                        <path xmlns="http://www.w3.org/2000/svg" d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/>
-                                </svg>
+                                    <path xmlns="http://www.w3.org/2000/svg" d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z"/>
+                            </svg>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.github.com/IsaacLaquerre/" target="_blank" style="color: white;">
                             <svg width="40" height="40" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg" style="filter: invert(1);" fill-rule="evenodd" clip-rule="evenodd">
-                                    <path xmlns="http://www.w3.org/2000/svg" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/>
-                                </svg>
+                                <path xmlns="http://www.w3.org/2000/svg" d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/>
+                            </svg>
                         </a>
                     </li>
                 </ul>
                 <div class="center">
-                    <span style="font-size: 10pt;">Copyright © 2021 Isaac Laquerre - All rights reserved</span>
+                    <span style="font-size: 10pt;">Copyright © 2021 Isaac Laquerre - Tous droits réservés</span>
                 </div>
             </div>
         </div>
@@ -307,7 +306,7 @@ import emailjs from "@emailjs/browser";
 emailjs.init("user_w9cTeehWqoxZ7kXe4o3Iq");
 
 export default {
-  name: 'HomePage',
+  name: 'PageAccueil',
   props: {
     title: String
   },
@@ -327,18 +326,18 @@ export default {
             subject: this.subject,
             message: this.message
         }).then(() => {
-            alert("Email successfully sent.");
+            alert("E-mail envoyé avec succès.");
+
+            this.email = ''
+            this.subject = ''
+            this.message = ''
         }).catch(err => {
-            alert("Internal error. Couldn't send email. Please try again in a few minutes.")
+            alert("Erreur interne. Impossible d'envoyer le e-mail. Veuillez réessayer dans quelques minutes.");
             console.log(err);
         });
 
-        this.email = ''
-        this.subject = ''
-        this.message = ''
       }
   }
-
 }
 </script>
 

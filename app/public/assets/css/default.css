@@ -237,7 +237,7 @@ body {
     height: 100vh;
     background-color: var(--main-mobile-color);
     z-index: 105;
-    opacity: 0.95;
+    opacity: 0.98;
 }
 
 #lang {
@@ -355,6 +355,10 @@ form button#submit:hover {
     transform: scale(1.02);
 }
 
+.footer-content ul#socialMedia li:active {
+    transform: scale(0.98);
+}
+
 .footer ul li a {
     color: white;
 }
@@ -372,6 +376,7 @@ form button#submit:hover {
     z-index: 100;
     box-shadow: #41414170 1px 1.5px;
     transition: 0.2s ease;
+    opacity: 0.9;
 }
 
 #scrollBackToTop:active {

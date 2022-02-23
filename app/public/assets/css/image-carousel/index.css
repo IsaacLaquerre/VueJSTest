@@ -58,6 +58,10 @@
     background-color: rgb(190, 190, 190);
 }
 
+.carousel-arrow:active {
+    transform: scale(0.98);
+}
+
 .carousel-arrow.left {
     position: absolute;
     bottom: calc(10% + 10vw);
