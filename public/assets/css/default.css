@@ -232,7 +232,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    top: calc(10px + var(--headerHeight));
+    top: var(--headerHeight);
     width: 100vw;
     height: 100vh;
     background-color: var(--main-mobile-color);
