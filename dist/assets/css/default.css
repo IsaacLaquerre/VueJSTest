@@ -36,6 +36,9 @@
         display: block;
         z-index: 99;
     }
+    .dropdown-content {
+        top: 95px;
+    }
     .navlist {
         width: 200px;
     }
@@ -87,6 +90,9 @@
     }
     .navbar2 {
         display: none;
+    }
+    .dropdown-content {
+        top: var(--headerHeight);
     }
     .navlist {
         float: right;
