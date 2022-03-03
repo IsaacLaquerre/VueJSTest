@@ -1,0 +1,73 @@
+:root {
+    --projectWidth: 30%;
+}
+
+@media only screen and (min-width: 900px) {
+    .projects {
+        flex-direction: row;
+    }
+    .project {
+        width: var(--projectWidth);
+        min-height: 700px;
+    }
+    .project img {
+        max-height: 40%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .projects {
+        flex-direction: column;
+    }
+    .project {
+        width: calc(var(--projectWidth) * 2);
+        height: clamp(400px, 600px, 800px);
+    }
+    .project img {
+        max-height: 40%;
+    }
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 2.5px;
+}
+
+.project {
+    margin: 0 auto;
+    background-color: var(--secondary-color);
+    position: relative;
+    text-align: left;
+}
+
+.project h1 {
+    font-size: 2rem;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+}
+
+.project span {
+    font-size: 1.25rem;
+}
+
+.project img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 25px auto 0;
+    bottom: 12.5%;
+    max-width: 90%;
+}
+
+.project .link {
+    text-decoration: underline;
+    color: white;
+    display: block;
+    position: absolute;
+    left: 10px;
+    bottom: 5px;
+    margin-top: 1rem;
+}
