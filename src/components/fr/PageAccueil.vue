@@ -145,7 +145,7 @@
                     <ul style="text-align: left;">
                         <li>Utilisé Node.js, JavaScript, HTML & CSS pendant plus de <span id="experience"></span> ans</li>
                         <li>Travaillé dans le développement web à mon compte pour les <span id="freelanceExperience"></span> dernières années</li>
-                        <li>Comfortable avec ReactJS, GitHub, Amazon Web Services, CloudFlare et autres installations DNS</li>
+                        <li>À l'aise avec VueJS, ReactJS, GitHub, Amazon Web Services, CloudFlare et autres installations DNS</li>
                         <li>Travaillé avec C#, C++, Python, Ruby (+ Rails), Java et Lua</li>
                     </ul>
                     <br />
