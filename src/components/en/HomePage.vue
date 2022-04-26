@@ -146,7 +146,7 @@
                     <ul style="text-align: left;">
                         <li>Have worked for over <span id="experience"></span> years with Node.js, JavaScript, HTML & CSS</li>
                         <li>Been freelance working in web development for the past <span id="freelanceExperience"></span> years</li>
-                        <li>Comfortable with ReactJS, GitHub, Amazon Web Services, CloudFlare and other DNS set-ups</li>
+                        <li>Comfortable with VueJS, ReactJS, GitHub, Amazon Web Services, CloudFlare and other DNS set-ups</li>
                         <li>Worked with C#, C++, Python, Ruby (+ Rails), Java and Lua</li>
                     </ul>
                     <br />
